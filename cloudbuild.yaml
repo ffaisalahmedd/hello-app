@@ -34,6 +34,6 @@ steps:
   - 'CLOUDSDK_CONTAINER_CLUSTER=test'
 # push images to Google Container Registry with tags
 images: [
-   'gcr.io/$PROJECT_ID/hello-app:docker',
+   'gcr.io/$PROJECT_ID/hello-app:master-$COMMIT_SHA',
    'gcr.io/$PROJECT_ID/hello-app:latest'
   ]
