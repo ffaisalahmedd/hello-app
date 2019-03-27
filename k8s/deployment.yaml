@@ -18,4 +18,4 @@ spec:
       - image: gcr.io/<google-project-id>/hello-app:latest
         name: hello-app
         ports:
-        - containerPort: <container-port>
+        - containerPort: 80
