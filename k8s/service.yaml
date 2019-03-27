@@ -8,5 +8,5 @@ spec:
   ports:
   - protocol: TCP
     port: 80
-    targetPort: <container-port>
+    targetPort: 80
   type: LoadBalancer
