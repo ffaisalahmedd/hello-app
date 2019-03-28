@@ -15,7 +15,7 @@ spec:
         run: hello-app
     spec:
       containers:
-      - image: gcr.io/mykubernetes-234210/hello-app:latest
+      - image: gcr.io/mykubernetes-234210/hello-app
         name: hello-app
         ports:
         - containerPort: 80
