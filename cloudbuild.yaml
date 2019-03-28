@@ -11,7 +11,7 @@ steps:
   args: [
    'build',
    '-t',
-   'gcr.io/mykubernetes-234210/hello-app:master',
+   'gcr.io/mykubernetes-234210/hello-app',
    '.'
   ]
 #step 3
@@ -27,7 +27,7 @@ steps:
    'image',
    'deployment',
    'hello-app',
-   'hello-app=gcr.io/mykubernetes-234210/hello-app:master'
+   'hello-app=gcr.io/mykubernetes-234210/hello-app'
   ]
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=us-central1-b'
