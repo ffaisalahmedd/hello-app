@@ -11,7 +11,7 @@ steps:
   args: [
    'build',
    '-t',
-   'gcr.io/mykubernetes-234210/hello-app',
+   'gcr.io/mykubernetes-234210/hello-app:.*',
    '.'
   ]
 #step 3
@@ -27,12 +27,12 @@ steps:
    'image',
    'deployment',
    'hello-app',
-   'hello-app=gcr.io/mykubernetes-234210/hello-app'
+   'hello-app=gcr.io/mykubernetes-234210/hello-app:.*'
   ]
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=us-central1-b'
   - 'CLOUDSDK_CONTAINER_CLUSTER= hello-cluster'
 # push images to Google Container Registry with tags
 images: [
-   'gcr.io/mykubernetes-234210/hello-app',
+   'gcr.io/mykubernetes-234210/hello-app:.*',
   ]
