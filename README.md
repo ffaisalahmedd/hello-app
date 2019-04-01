@@ -1,2 +1,1 @@
 # Simple hello application
-# test
