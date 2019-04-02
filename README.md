@@ -1,1 +1,1 @@
-# This is Simple hello application
+# Simple hello application
