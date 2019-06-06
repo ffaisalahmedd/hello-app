@@ -2,20 +2,20 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    run: hello-app
-  name: hello-app
+    run: welcome-test
+  name: welcome-test
 spec:
   replicas: 3
   selector:
     matchLabels:
-      run: hello-app
+      run: welcome-test
   template:
     metadata:
       labels:
-        run: hello-app
+        run: welcome-test
     spec:
       containers:
       - image: gcr.io/project-kubernetes-242705/welcome
-        name: hello-app
+        name: welcome-test
         ports:
         - containerPort: 8080
