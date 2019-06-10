@@ -4,14 +4,14 @@ steps:
   entrypoint: 'bash'
   args: [
    '-c',
-   'docker pull gcr.io/project-kubernetes-242705/welcome:latest || exit 0'
+   'docker pull gcr.io/project-kubernetes-242705/hello-app-image:latest || exit 0'
   ]
 #step 2
 - name: gcr.io/cloud-builders/docker
   args: [
    'build',
    '-t',
-   'gcr.io/project-kubernetes-242705/welcome:$BRANCH_NAME-$COMMIT_SHA',
+   'gcr.io/project-kubernetes-242705/hello-app-image:$BRANCH_NAME-$COMMIT_SHA',
    '.'
   ]
 #step 3
@@ -27,12 +27,12 @@ steps:
    'image',
    'deployment',
    'hello-app',
-   'hello-app=gcr.io/project-kubernetes-242705/welcome:$BRANCH_NAME-$COMMIT_SHA'
+   'hello-app=gcr.io/project-kubernetes-242705/hello-app-image:$BRANCH_NAME-$COMMIT_SHA'
   ]
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=us-east1-b'
   - 'CLOUDSDK_CONTAINER_CLUSTER=poc-cluster'
 # push images to Google Container Registry with tags
 images: [
-   'gcr.io/project-kubernetes-242705/welcome:$BRANCH_NAME-$COMMIT_SHA',
+   'gcr.io/project-kubernetes-242705/hello-app-image:$BRANCH_NAME-$COMMIT_SHA',
   ]
